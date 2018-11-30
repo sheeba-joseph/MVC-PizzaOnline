@@ -11,6 +11,6 @@ namespace PizzaOnline.Models
         public string Crust { get; set; }
         public string Size { get; set; }
         public string Sauce { get; set; }
-        public string Topping { get; set; }
+        public List<string> Topping { get; set; }
     }
 }

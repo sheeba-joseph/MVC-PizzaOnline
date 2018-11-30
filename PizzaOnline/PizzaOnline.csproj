@@ -179,6 +179,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\Cart.jpg" />
+    <Content Include="Images\PizzaSize.jpg" />
     <Content Include="Images\PizzaOne.jpg" />
     <Content Include="Images\PizzaTwo.jpg" />
     <Content Include="Images\PizzaThree.jpg" />
