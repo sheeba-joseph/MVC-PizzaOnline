@@ -1,0 +1,52 @@
+﻿@model IEnumerable<PizzaOnline.Models.CheckOutItem>
+
+@{
+    ViewBag.Title = "CheckOutItems";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>You have selected :@ViewBag.Items</h2>
+
+
+<div class="container">
+        @foreach (var item in Model)
+        {
+
+            <div class="row">
+                <hr />
+                <div class="col-md-4" style="align-items:flex-end">
+                    <img src="~/Images/PizzaSize.jpg" style="width:100px; height:100px;" />
+                </div>
+                <div class="col-md-4">
+                    <p style="font:bold 14px arial">  @Html.DisplayFor(modelItem => item.Details)</p>
+                </div>
+                @{
+                    double p = item.Price;
+
+                }
+                <div class="col-md-4">
+                    <p style="font:bold 14px arial">@string.Format("{0:C}", p)</p>
+                       
+                    
+                </div>
+
+            </div>
+                            }
+
+    <hr />
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4"><p style="font:bold 14px arial"> Total Price:</p></div>
+        <div class="col-md-4 "><p style="font:bold 14px arial">@string.Format("{0:C}", ViewBag.TotalPrice)</p></div>
+    </div>
+    <hr />
+    <div class="row">
+        <div class="col-md-offset-8">
+            <p>
+                <button type="button" class="btn btn-danger home-btn" onclick="@("window.location.href='" + @Url.Action("ContinueWithPayment", "Order") + "'");">Continue with Payment</button>
+            </p>
+        </div>
+    </div>
+
+</div>
+
+
